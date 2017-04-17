@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 ####1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
-* behavior_clone.py containing the script to create and train the model
+* model.py containing the script to create and train the model
 * drive_data_helper/drive_data.py - helper methods to load and create generators from drive data
 * net_arch/nvid_arch.py - contains the keras nvidia convnet architecture implementation
 * drive.py for driving the car in autonomous mode
@@ -47,7 +47,7 @@ python drive.py model.h5
 
 ####3. Submission code is usable and readable
 
-The behavior_clone.py file along with the drive_data_helper/drive_data.py contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
+The model.py file along with the drive_data_helper/drive_data.py contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
 ###Model Architecture and Training Strategy
 
@@ -67,7 +67,7 @@ The model was trained and validated on different data sets to ensure that the mo
 
 ####3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (behavior_clone.py line 28).
+The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 28).
 
 ####4. Appropriate training data
 
