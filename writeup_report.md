@@ -37,7 +37,7 @@ My project includes the following files:
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network 
 * final_run.mp4 - video of the final model run
-* writeup_report.md or writeup_report.pdf summarizing the results
+* writeup_report.md summarizing the results
 
 ####2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -73,11 +73,12 @@ The model used an adam optimizer, so the learning rate was not tuned manually (b
 
 Training data was chosen to keep the vehicle driving on the center of the road. I used a combination of center lane driving, recovering from the left and right sides of the road. I cropped the image so that it removes unwanted parts of the image that do not lend to training the model.
 
-Original image:
+Original image:<br/>
 ![original image][sample_center_image]
-Cropped image:
+<br/>
+Cropped image:<br/>
 ![cropped image][cropped_image]
-
+<br/>
 
 For details about how I created the training data, see the next section. 
 
@@ -109,17 +110,17 @@ The code for the architecture is in the net_arch/nvid.arch.py file.
 
 My model consists of a convolution neural network with the following layers
 
-[ input (160x320x3) -> crop-> 78*320*3 -> normalization -> c1:5x5x24:relu -> max(2x2) -> 
+[ input (160x320x3) -> crop-> 78x320x3 -> normalization -> c1:5x5x24:relu -> max(2x2) -> 
 c2:5x5x36:relu -> max(2,2) ->  c3:5x55x48:relu ->max(2,2) -> c4: 3x3x64  -> c5 3x3x64 -> 
 flat -> dropout ->  fc(120) -> dropout ->  fc(84) -> dropout -> fc(1) ]
     
-1. Input Layer: 160*320*3  (RGB image 160 pixels high and 320 pixels wide) 
+1. Input Layer: 160x320x3  (RGB image 160 pixels high and 320 pixels wide) 
 
-2. Cropping Layer: crops image to 78*320*3 to remove unwanted parts out of the image. (code line 18)
+2. Cropping Layer: crops image to 78x320x3 to remove unwanted parts out of the image. (code line 18)
 
 3. Normalization layer : a Keras Lambda layer that normalizes the values in the range -0.5 to + 0.5 (code line 19)
 
-4. This is followed by three 5x5 convolution layers each followed by a max pooling layer with stride 2. The depth size in the 5*5 layers are 24,36 and 48 respectively (code lines 20-25)
+4. This is followed by three 5x5 convolution layers each followed by a max pooling layer with stride 2. The depth size in the 5x5 layers are 24,36 and 48 respectively (code lines 20-25)
 
 5. Then we have 2 3x3 convolution layers with depth size 64 (code lines 26-27)
 
