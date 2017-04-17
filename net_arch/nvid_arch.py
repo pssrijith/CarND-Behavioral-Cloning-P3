@@ -8,7 +8,7 @@ def build_nvidia():
     """
     Builds a Keras sequential model of the nvidia convnet arch
 
-    [ input - > 160x32x3 -> crop(64,22)-> normalization ->
+    [ input - > 160x320x3 -> crop(60,22)-> normalization ->
     c1:5x5x24:relu -> max(2x2) -> c2:5x5x36:relu -> max(2,2) ->  c3:5x55x48:relu ->max(2,2) ->
     c4: 3x3x64  -> c5 3x3x64 -> flat -> dropout ->  fc(120) -> dropout ->  fc(84) -> dropout -> fc(1) ]
 
