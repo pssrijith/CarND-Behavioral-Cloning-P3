@@ -36,7 +36,7 @@ My project includes the following files:
 * net_arch/nvid_arch.py - contains the keras nvidia convnet architecture implementation
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network 
-* final_run.mp4 - video of the final model run
+* video.mp4 - video of the final model run
 * writeup_report.md summarizing the results
 
 ####2. Submission includes functional code
